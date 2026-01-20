@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Site 4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<audio id="bgMusic" loop>
+  <source src="music/birthday.mp3" type="audio/mpeg">
+  Your browser does not support audio.
+</audio>
+
+<body>
+
+<!-- SCREEN 1 -->
+<div class="screen active" id="screen1">
+  <h1>Enter Your Name</h1>
+  <input
+    type="text"
+    id="nameInput"
+    placeholder="Enter name"
+    onkeydown="if(event.key==='Enter'){ checkName(); }"
+  >
+  <button type="button" onclick="checkName()">Continue</button>
+</div>
+
+<!-- SCREEN 2 -->
+<div class="screen" id="screen2">
+  <canvas id="heartCanvas"></canvas>
+  <div id="birthdayText">Happy Birthday 🎂✨</div>
+</div>
+
+<!-- SCREEN 3 : AUTO SCROLL COLLECTION -->
+<div class="screen" id="screen3">
+  <h2>Special Collection ❤️</h2>
+
+  <div class="carousel">
+    <div class="track">
+
+      <!-- ORIGINAL SET -->
+      <div class="card"><img src="images/img1.jpg"><h3>Your Smile</h3><p>Priceless & Forever</p></div>
+      <div class="card"><img src="images/img2.jpg"><h3>Your Kindness</h3><p>Makes the world better</p></div>
+      <div class="card"><img src="images/img3.jpg"><h3>Your Friendship</h3><p>Limited Edition ❤️</p></div>
+      <div class="card"><img src="images/img4.jpg"><h3>Your Laugh</h3><p>Contagious 😄</p></div>
+      <div class="card"><img src="images/img5.jpg"><h3>Your Strength</h3><p>Inspires 💪</p></div>
+      <div class="card"><img src="images/img6.jpg"><h3>Your Presence</h3><p>Everything ❤️</p></div>
+
+      <!-- DUPLICATE SET (for infinite scroll) -->
+      <div class="card"><img src="images/img1.jpg"><h3>Your Smile</h3><p>Priceless & Forever</p></div>
+      <div class="card"><img src="images/img2.jpg"><h3>Your Kindness</h3><p>Makes the world better</p></div>
+      <div class="card"><img src="images/img3.jpg"><h3>Your Friendship</h3><p>Limited Edition ❤️</p></div>
+      <div class="card"><img src="images/img4.jpg"><h3>Your Laugh</h3><p>Contagious 😄</p></div>
+      <div class="card"><img src="images/img5.jpg"><h3>Your Strength</h3><p>Inspires 💪</p></div>
+      <div class="card"><img src="images/img6.jpg"><h3>Your Presence</h3><p>Everything ❤️</p></div>
+
+    </div>
+  </div>
+
+  <button type="button" onclick="goToThankYou()">Next</button>
+</div>
+
+<!-- SCREEN 4 -->
+<div class="screen" id="screen4">
+  <h1 id="thankText"></h1>
+</div>
+
+<script src="script.js"></script>
+<!-- SCREEN 5 : FINAL MESSAGE -->
+<div class="screen" id="screen5">
+  <div class="final-card">
+    <img src="images/final.jpg" alt="Special Memory">
+    <h2>Always Stay Happy 💖</h2>
+    <p>
+      thammudu midha abimanamtho kastha dayathalachi phonepay cheyi akka
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* COMMON */
+.screen {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  display: flex;
+}
+
+/* SCREEN 1 */
+#screen1 {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: white;
+}
+
+#screen1 input {
+  padding: 14px;
+  width: 260px;
+  border-radius: 14px;
+  border: none;
+  font-size: 18px;
+  margin: 12px;
+}
+
+/* SCREEN 2 */
+#screen2 {
+  background: black;
+}
+
+#heartCanvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#birthdayText {
+  color: white;
+  font-size: 48px;
+  display: none;
+  z-index: 2;
+}
+
+/* SCREEN 3 */
+#screen3 {
+  background: #f4f4f4;
+}
+
+.carousel {
+  width: 90%;
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+/* AUTO SCROLL ANIMATION */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* CARD */
+.card {
+  width: 260px;
+  margin: 0 15px;
+  background: white;
+  padding: 16px;
+  border-radius: 22px;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.card h3 {
+  margin-top: 12px;
+  font-size: 20px;
+}
+
+.card p {
+  margin-top: 6px;
+  font-size: 15px;
+  color: #444;
+}
+
+/* SCREEN 4 */
+#screen4 {
+  background: black;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+/* FINAL SCREEN */
+#screen5 {
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  color: white;
+}
+
+.final-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 24px;
+  text-align: center;
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.final-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+.final-card h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.final-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+
+
